@@ -1,87 +1,290 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<style>
+body {
+  margin: 0;
+  margin-bottom: 3rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body > section {
+  margin: auto;
+  max-width: 50rem;
+}
+
+@media(max-width: 52rem) {
+  body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+h1 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-size: 250%;
+  text-align: center;
+}
+
+h6 {
+  margin-top: 0;
+  margin-bottom: 4.5rem;
+  font-size: 100%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 4.5rem;
+  margin-top: 4.5rem;
+  text-align: center;
+}
+
+footer {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited, a:active {
+  color: blue;
+}
+
+article li a:first-child, a.project {
+  font-weight: bold;
+}
+
+article {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+article .crop {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 3em;
+}
+
+article h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+article ul {
+  padding-left: 1rem;
+}
+</style>
+
+<title>Caml Works</title>
+<meta name="description" content="Functional programming for the masses">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 <body>
 
+<section id="company">
 <h1>Caml Works</h1>
-<h2>Building an OCaml ecosystem that is a pleasure to use.</h2>
+<h6>Functional programming for the masses</h6>
 
 <p>
-Caml Works develops the OCaml ecosystem &mdash; neat, easy-to-use libraries,
-excellent documentation, language onboarding process, and the like.
+Caml Works develops the OCaml ecosystem, especially Web development tools. We
+make neat, easy-to-use, yet powerful libraries with excellent documentation. We
+seek to improve the language onboarding process, and to help develop a vibrant
+community around OCaml.
 </p>
 
 <p>
-Caml Works was formed by a group of experienced ecosystem contributors, as a
-kind of R&D cooperative. All of our output continues to be open-sourced under
-free licenses and donated to the community.
+We want to bring practical functional programming to the widest possible
+audience that would benefit from it.
+</p>
+
+<p>
+Caml Works was formed by a group of experienced OCaml ecosystem contributors, as
+a kind of deep tech cooperative. All of our output continues to be open-sourced
+under free licenses and donated to the community. We work in public, building up
+knowledge in the community as we build out projects.
 </p>
 
 <p>
 We are initially focusing on developing the Web framework
-<a href="https://github.com/aantron/dream">Dream</a>, contributing to related
-libraries, and smoothing out any friction in OCaml programming along the way.
+<a href="https://github.com/aantron/dream">Dream</a>, related projects, and
+smoothing out any friction in OCaml programming along the way.
 </p>
 
+<p>
+Contact us at <a href="mailto:o@caml.works">o@caml.works</a>.
+</p>
+</section>
+
 <section id="bios">
-<h2>Who are are</h2>
+  <h2>Who we are</h2>
 
-<article>
-<h2><a href="https://github.com/aantron/dream">Anton Bachin</a></h2>
-<ul>
-<li>Author of <a href="https://github.com/aantron/dream">Dream</a>, the Web framework, including the <a href="https://aantron.github.io/dream/">API reference</a>, <a href="http://dream.as/">online playground</a>, and <a href="https://github.com/aantron/dream/tree/master/example#readme">thorough examples</a>.
-</li>
-<li>Maintainer of <a href="https://github.com/ocsigen/lwt">Lwt</a>, the promise and concurrent I/O library, during 2016-2020.
-</li>
-<li>Maintainer of <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a>, the OCaml coverage tool, since 2016.
-</li>
-<li>Author of <a href="https://github.com/aantron/lambdasoup">Lambda Soup</a> and <a href="https://github.com/aantron/markup.ml">Markup.ml</a>, the two layers of OCaml's spec-compliant HTML5 parser.
-</li>
-<li>Author of <a href="https://github.com/aantron/luv">Luv</a>, an easy-to-use binding to <a href="https://github.com/libuv/libuv">libuv</a>, the C library at the core of Node.js, and thus effectively a full portable systems I/O library.
-</li>
-<li>Maintainer of <a href="https://github.com/ocaml/odoc">odoc</a> during 2017-2020, and author of its current docstring <a href="https://github.com/ocaml-doc/odoc-parser">parser</a>.
-</li>
-<li>Author of <a href="https://github.com/aantron/promise">Promise</a>, a type-safe binding to JavaScript promises.
-</li>
-<li>Contributor to <a href="https://discuss.ocaml.org/t/865">discuss.ocaml.org</a>.
-</li>
-<li>Experienced developer in other languages, for example <a href="https://github.com/aantron/better-enums">C++</a>, familiar with programming on Linux, macOS, Windows, and FreeBSD.
-</li>
-</ul>
-</article>
+  <div id="actual-bios">
+    <article>
+      <section>
+      <div class="crop">
+        <img width="100px" src="aantron.jpg"></img>
+      </div>
+      </section>
 
-<article>
-<h2><a href="https://github.com/anmonteiro">Antonio Nuno Monteiro</a></h2>
-<ul>
-<li>Maintainer of <a href="https://github.com/melange-re/melange">Melange</a>, a fork of <a href="https://github.com/rescript-lang/rescript-compiler">ReScript</a> oriented towards the OCaml ecosystem.
-</li>
-<li>Author of <a href="https://github.com/anmonteiro/ocaml-h2">h2</a>, OCaml's implementation of <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a>.
-</li>
-<li>Author of <a href="https://github.com/anmonteiro/ocaml-quic">ocaml-quic</a>, an implementation of <a href="https://en.wikipedia.org/wiki/HTTP/3">HTTP/3</a>.
-</li>
-<li>Maintainer of advanced forks of <a href="https://github.com/anmonteiro/httpaf">http/af</a> and <a href="https://github.com/anmonteiro/websocketaf">websocketaf</a>, implementing HTTP/1.1 and WebSockets, respectively.
-</li>
-<li>Author of <a href="https://github.com/anmonteiro/piaf">piaf</a>, an HTTP client library.
-</li>
-<li>Maintainer of <a href="https://github.com/anmonteiro/nix-overlays">nix-overlays</a>, a repository for reproducible OCaml builds with <a href="https://nixos.org/">Nix</a>.
-</li>
-</ul>
-</article>
+      <section>
+      <h3><a href="https://github.com/aantron/dream">Anton Bachin</a></h3>
+      <ul>
+        <li>
+        Author of <a href="https://github.com/aantron/dream">Dream</a>, a Web
+        framework, including its <a href="https://aantron.github.io/dream/">API
+        reference</a>, <a href="http://dream.as/">playground</a>, and
+        <a href="https://github.com/aantron/dream/tree/master/example#readme">
+        examples</a>.
+        </li>
+        <li>
+        Author of <a href="https://github.com/aantron/luv">Luv</a>, a binding to
+        <a href="https://github.com/libuv/libuv">libuv</a>, the C library that
+        drives Node.js.
+        </li>
+        <li>
+        Author of <a href="https://github.com/aantron/lambdasoup">Lambda
+        Soup</a> and
+        <a class="project" href="https://github.com/aantron/markup.ml">
+        Markup.ml</a>, spec-compliant HTML5 parsers.
+        </li>
+        <li>
+        Author of <a href="https://github.com/aantron/promise">Promise</a>, a
+        type-safe binding to JavaScript promises.
+        </li>
+        <li>
+        Author of
+        <a href="https://github.com/ocaml-doc/odoc-parser">odoc-parser</a>,
+        odoc's docstring parser.
+        </li>
+        <li>
+        Maintainer of <a href="https://github.com/ocsigen/lwt">Lwt</a>, the
+        widely-used concurrency library, 2016-2020.
+        </li>
+        <li>
+        Maintainer of
+        <a href="https://github.com/aantron/bisect_ppx">Bisect_ppx</a>, the
+        coverage tool, since 2016.
+        </li>
+        <li>
+        Maintainer of <a href="https://github.com/ocaml/odoc">odoc</a>, the
+        documentation generator, 2017-2020.
+        </li>
+        <li>
+        Contributor to
+        <a href="https://discuss.ocaml.org/t/865">discuss.ocaml.org</a>.
+        </li>
+        <li>
+        Experienced developer in other languages, such as
+        <a href="https://github.com/aantron/better-enums">C++</a>.
+        </li>
+        <li>
+        Familiar with programming on Linux, macOS, Windows, FreeBSD.
+        </li>
+      </ul>
+      </section>
+    </article>
 
-<article>
-<h2><a href="https://github.com/ulrikstrid">Ulrik Strid</a></h2>
-<ul>
-<li>Author of <a href="https://github.com/ulrikstrid/ocaml-oidc">ocaml-oidc</a>, the OCaml <a href="https://en.wikipedia.org/wiki/OpenID#OpenID_Connect_(OIDC)">social login</a> library certified by <a href="https://openid.net/developers/certified/">OpenID Connect</a>.
-</li>
-<li>Author of <a href="https://github.com/ulrikstrid/reason-jose">reason-jose</a>, an OCaml implementation of <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> and related <a href="https://jose.readthedocs.io/en/latest/">JSON-based Web security standards</a>.
-</li>
-<li>Author of <a href="https://github.com/reason-native-web/morph">Morph</a>, a Web framework which helped inspire Dream.
-</li>
-<li>Author of the <a href="https://github.com/ocsigen/lwt/tree/master/src/unix/luv">Luv port of Lwt</a>, a major reconciliation between OCaml system I/O libraries.
-</li>
-<li>Experienced with Docker, Kubernetes, and CI pipelines.
-</li>
-</ul>
-</article>
+    <article>
+      <section>
+      <div class="crop">
+        <img width="100px" src="anmonteiro.png"></img>
+      </div>
+      </section>
+
+      <section>
+      <h3><a href="https://github.com/anmonteiro">Antonio Nuno Monteiro</a></h3>
+      <ul>
+        <li>
+        Author of <a href="https://github.com/anmonteiro/ocaml-h2">h2</a>,
+        OCaml's <a href="https://en.wikipedia.org/wiki/HTTP/2">HTTP/2</a>
+        implementation.
+        </li>
+        <li>
+        Author of
+        <a href="https://github.com/anmonteiro/ocaml-quic">ocaml-quic</a>,
+        OCaml's <a href="https://en.wikipedia.org/wiki/HTTP/3">HTTP/3</a>
+        implementation.
+        </li>
+        <li>
+        Author of <a href="https://github.com/anmonteiro/piaf">piaf</a>, an HTTP
+        client library.
+        </li>
+        <li>
+        Author of
+        <a href="https://github.com/anmonteiro/nix-overlays">nix-overlays</a>,
+        a repository for reproducible OCaml builds.
+        </li>
+        <li>
+        Maintainer of
+        <a href="https://github.com/melange-re/melange">Melange</a>, a
+        <a href="https://github.com/rescript-lang/rescript-compiler">ReScript</a>
+        fork oriented towards the OCaml ecosystem.
+        </li>
+        <li>
+        Maintainer of advanced forks of
+        <a href="https://github.com/anmonteiro/httpaf">http/af</a> and
+        <a class="project" href="https://github.com/anmonteiro/websocketaf">
+        websocket/af</a>, for HTTP/1.1 and WebSockets.
+        </li>
+      </ul>
+      </section>
+    </article>
+
+    <article>
+      <section>
+      <div class="crop">
+        <img width="100px" src="ulrikstrid.jpg"></img>
+      </div>
+      </section>
+
+      <section>
+      <h3><a href="https://github.com/ulrikstrid">Ulrik Strid</a></h3>
+      <ul>
+        <li>
+        Author of
+        <a href="https://github.com/ulrikstrid/ocaml-oidc">ocaml-oidc</a>, a
+        <a href="https://en.wikipedia.org/wiki/OpenID#OpenID_Connect_(OIDC)">
+        social login</a> library certified by
+        <a href="https://openid.net/developers/certified/">OpenID Connect</a>.
+        </li>
+        <li>
+        Author of
+        <a href="https://github.com/ulrikstrid/reason-jose">reason-jose</a>,
+        an implementation of
+        <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a>
+        and related standards.
+        </li>
+        <li>
+        Author of
+        <a href="https://github.com/reason-native-web/morph">Morph</a>, a Web
+        framework.
+        </li>
+        <li>
+        Author of the
+        <a href="https://github.com/ocsigen/lwt/tree/master/src/unix/luv">Luv
+        port of Lwt</a>, a major reconciliation between I/O libraries.
+        </li>
+        <li>Extensive experience with Docker, Kubernetes, and CI pipelines.
+        </li>
+      </ul>
+      </section>
+    </article>
+  </div>
 </section>
 
 <script>
@@ -102,9 +305,11 @@ function shuffle(a) {
 
 shuffle(articles);
 
-var bios = document.getElementById("bios");
+var bios = document.getElementById("actual-bios");
 articles.forEach(function (article) { bios.appendChild(article); })
 </script>
+
+<footer>© 2021 Caml Works</footer>
 
 </body>
 </html>
